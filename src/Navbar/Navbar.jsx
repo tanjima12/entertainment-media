@@ -1,6 +1,17 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { FaUserAlt } from "react-icons/fa";
+import { useContext } from "react";
+import { AuthContexts } from "../AuthProvider/AuthProvider";
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContexts);
+  const handleSignout = () => {
+    logOut()
+      .then((result) => {
+        console.log(result, "successfully log out");
+      })
+      .catch((error) => console.error(error));
+  };
   const navlist = (
     <>
       <NavLink to="/" className="mr-5">
@@ -62,7 +73,32 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Log In</a>
+          <div className="  ml-24 lg:ml-1 flex gap-3 items-center">
+            {user ? (
+              <>
+                <img
+                  className="h-12 w-12 rounded-full"
+                  src={user.photoURL}
+                ></img>
+                <p className="text-white">{user.displayName}</p>
+                <button
+                  onClick={handleSignout}
+                  className="btn btn-outline bg-red-200 px-10 border-none mr-3"
+                >
+                  Log Out
+                </button>
+              </>
+            ) : (
+              <>
+                <FaUserAlt className="text-3xl text-white"></FaUserAlt>
+                <Link to="/login">
+                  <button className="btn btn-outline bg-red-200 px-10 border-none mr-3">
+                    LogIn
+                  </button>
+                </Link>
+              </>
+            )}
+          </div>
         </div>
       </div>
     </div>
