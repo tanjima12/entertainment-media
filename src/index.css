@@ -1,3 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Turret+Road:wght@400;500;700;800&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;600;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.homebg {
+  background-image: url("https://i.ibb.co/TM4Np3N/Untitled-1.jpg");
+  background-size: cover;
+  /* background-color: black;
+  opacity: 100%; */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.bannerbg {
+  background-image: url("https://i.ibb.co/Bzf0gPJ/assortment-cinema-elements-red-background-with-copy-space-1.jpg");
+  background-position: cover;
+  background-repeat: no-repeat;
+}

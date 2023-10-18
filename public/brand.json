@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "brandname": "NetFlix",
+    "image": "https://i.ibb.co/ws1RG8N/pexels-karolina-grabowska-5202917.jpg"
+  },
+  {
+    "id": 2,
+    "brandname": "DisNey",
+    "image": "https://i.ibb.co/QYR9m6z/Screenshot-69.png"
+  },
+  {
+    "id": 3,
+    "brandname": "HoiChoi",
+    "image": "https://i.ibb.co/GndHrMM/Screenshot-67.png"
+  },
+  {
+    "id": 4,
+    "brandname": "Warner Bros.",
+    "image": "https://i.ibb.co/VBCp1tn/Screenshot-70.png"
+  },
+  {
+    "id": 5,
+    "brandname": "Sony Picture",
+    "image": "https://i.ibb.co/4WKbhNT/Screenshot-68.png"
+  },
+  {
+    "id": 6,
+    "brandname": "Spotify",
+    "image": "https://i.ibb.co/NtFNvrh/music-on-your-smartphone-1796117-1280.jpg"
+  }
+]
