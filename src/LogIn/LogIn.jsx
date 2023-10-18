@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import Navbar from "../Navbar/Navbar";
 import { AuthContexts } from "../AuthProvider/AuthProvider";
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const LogIn = () => {
   const [finalUser, setFinalUser] = useState(null);
@@ -23,14 +23,32 @@ const LogIn = () => {
         console.error(error);
       });
   };
+  const handleLogIn = (e) => {
+    e.preventDefault();
+    console.log(e.currentTarget);
+    const form = new FormData(e.currentTarget);
+    const email = form.get("email");
+    const password = form.get("password");
+    SignIn(email, password)
+      .then((result) => {
+        console.log(result.user);
+
+        navigate(location.state ? location?.state : "/");
+        return alert("Successfull log in");
+      })
+      .catch((error) => {
+        console.error(error);
+        return alert("sorry password or Email is wrong!");
+      });
+  };
 
   return (
-    <div>
+    <div className="pb-40">
       <Navbar></Navbar>
-      <form onSubmit={}>
+      <form onSubmit={handleLogIn}>
         <div className="relative flex w-96 flex-col mt-20 lg:ml-[600px] rounded-xl bg-orange-100 bg-clip-border text-gray-700 shadow-md">
-          <div className="relative mx-4 -mt-6 mb-4 grid h-28 place-items-center overflow-hidden rounded-xl bg-gray-300  text-black shadow-lg ">
-            <h3 className="block font-sans text-3xl font-semibold leading-snug tracking-normal text-white antialiased">
+          <div className="relative mx-4 -mt-6 mb-4 grid h-28 place-items-center overflow-hidden rounded-xl  text-black ">
+            <h3 className="block font-sans text-3xl font-semibold leading-snug tracking-normal text-violet-950 antialiased">
               Log In
             </h3>
           </div>
@@ -96,8 +114,11 @@ const LogIn = () => {
               </Link>
             </p>
           </div>
-          <button onClick={handleGoogleSignIn} className="btn bg-red-200">
-            Log in With Google
+          <button
+            onClick={handleGoogleSignIn}
+            className="btn bg-amber-700 mb-3 w-56 ml-20"
+          >
+            Google logIn
           </button>
         </div>
       </form>

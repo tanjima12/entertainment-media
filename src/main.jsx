@@ -7,6 +7,9 @@ import Root from "./Root/Root";
 import Home from "./Home/Home";
 import EroorPage from "./EroorPage";
 import AddProduct from "./Addproduct/AddProduct";
+import Register from "./Register/Register";
+import LogIn from "./LogIn/LogIn";
+import AuthProvider from "./AuthProvider/AuthProvider";
 
 const router = createBrowserRouter([
   {
@@ -23,12 +26,22 @@ const router = createBrowserRouter([
         path: "/addProduct",
         element: <AddProduct></AddProduct>,
       },
+      {
+        path: "/register",
+        element: <Register></Register>,
+      },
+      {
+        path: "/login",
+        element: <LogIn></LogIn>,
+      },
     ],
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>
 );
