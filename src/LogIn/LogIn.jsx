@@ -3,6 +3,8 @@ import Navbar from "../Navbar/Navbar";
 import { AuthContexts } from "../AuthProvider/AuthProvider";
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import swal from "sweetalert";
+import Footer from "../Footer/Footer";
 
 const LogIn = () => {
   const [finalUser, setFinalUser] = useState(null);
@@ -34,11 +36,11 @@ const LogIn = () => {
         console.log(result.user);
 
         navigate(location.state ? location?.state : "/");
-        return alert("Successfull log in");
+        return swal("SuccessFully log in");
       })
       .catch((error) => {
         console.error(error);
-        return alert("sorry password or Email is wrong!");
+        return swal("Sorry password or email is wrong");
       });
   };
 
@@ -122,6 +124,7 @@ const LogIn = () => {
           </button>
         </div>
       </form>
+      <Footer></Footer>
     </div>
   );
 };

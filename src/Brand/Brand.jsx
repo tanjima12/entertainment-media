@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useNavigate } from "react-router-dom";
+import Footer from "../Footer/Footer";
 
 const Brand = ({ brand }) => {
   const { BrandName, image } = brand;

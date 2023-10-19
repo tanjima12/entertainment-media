@@ -2,7 +2,7 @@
 import Navbar from "../Navbar/Navbar";
 import Watch from "../Watch/Watch";
 import Banner from "../Banner/Banner";
-import { useLoaderData, useNavigate } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import Brand from "../Brand/Brand";
 import Footer from "../Footer/Footer";
 import Kids from "../Kids/Kids";
@@ -38,7 +38,6 @@ const Home = () => {
           <Watch></Watch>
         </div>
       </div>
-
       <Footer></Footer>
     </div>
   );
