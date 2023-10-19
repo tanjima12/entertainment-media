@@ -11,7 +11,7 @@ const Brand = ({ brand }) => {
     <div>
       <div
         onClick={handleBrandDetails}
-        className="relative flex ml-24 mb-8 max-w-[34rem] flex-col rounded-xl  bg-clip-border text-gray-700 shadow-md"
+        className="relative flex ml-10 mb-8 max-w-[34rem] h-[28rem] flex-col rounded-xl bg-teal-800  bg-clip-border text-gray-700 shadow-md"
       >
         <div className="relative m-0 overflow-hidden text-gray-700 bg-transparent rounded-none shadow-none bg-clip-border">
           <img src={image} alt="ui/ux review check" />
