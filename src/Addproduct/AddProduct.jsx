@@ -21,6 +21,17 @@ const AddProduct = () => {
       PhotoUrl,
     };
     console.log(addProductInfo);
+    fetch("http://localhost:5000/product", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(addProductInfo),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      });
   };
 
   return (
@@ -55,7 +66,7 @@ const AddProduct = () => {
                 <label className="input-group">
                   <input
                     type="text"
-                    name="Name"
+                    name="name"
                     placeholder="Name"
                     className="input input-bordered  w-96"
                   />

@@ -1,10 +1,16 @@
-import { useLoaderData } from "react-router-dom";
+// import { useLoaderData } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import Watch from "../Watch/Watch";
 import Banner from "../Banner/Banner";
+import { useLoaderData, useNavigate } from "react-router-dom";
+import Brand from "../Brand/Brand";
+import Footer from "../Footer/Footer";
+
+// http://localhost:5000/product
 
 const Home = () => {
   const brandInfo = useLoaderData();
+
   return (
     <div className="">
       <div className="">
@@ -19,24 +25,14 @@ const Home = () => {
             Our Some Selected Brand <br></br> Which we Provide you
           </h1>
           {brandInfo.map((brand) => (
-            <div key={brand.id}>
-              <div className="relative flex ml-24 mb-8 max-w-[34rem] flex-col rounded-xl  bg-clip-border text-gray-700 shadow-md">
-                <div className="relative m-0 overflow-hidden text-gray-700 bg-transparent rounded-none shadow-none bg-clip-border">
-                  <img src={brand.image} alt="ui/ux review check" />
-                </div>
-                <div className="p-6">
-                  <h4 className="block text-3xl text-center antialiased font-semibold leading-snug tracking-normal text-[#c6d8e7] font-pixelify">
-                    {brand.brandname}
-                  </h4>
-                </div>
-              </div>
-            </div>
+            <Brand key={brand.id} brand={brand}></Brand>
           ))}
         </div>
         <div className="mt-80">
           <Watch></Watch>
         </div>
       </div>
+      <Footer></Footer>
     </div>
   );
 };
