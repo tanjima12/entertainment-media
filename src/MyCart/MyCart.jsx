@@ -1,13 +1,42 @@
-import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 
+import Swal from "sweetalert2";
+
 const MyCart = () => {
   const myCartCollection = useLoaderData();
-  console.log(myCartCollection);
-  //   const [user, setUser] = useState();
+  const { _id } = myCartCollection;
+  console.log(_id);
 
+  console.log(myCartCollection);
+  const handleDelete = (_id) => {
+    console.log(_id);
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:5000/CartCollect/${_id}`, {
+          method: "DELETE",
+          headers: {
+            "content-type": "application/json",
+          },
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+          });
+
+        Swal.fire("Deleted!", "Your file has been deleted.", "success");
+      }
+    });
+  };
   return (
     <div className="pb-10">
       <Navbar></Navbar>
@@ -25,7 +54,10 @@ const MyCart = () => {
                   <p>{cart.shortDescription}</p>
                   <p className="text-red-600">Rating:{cart.rating}</p>
                   <div className="card-actions justify-end">
-                    <button className="btn bg-red-800 hover:bg-white">
+                    <button
+                      onClick={() => handleDelete(cart._id)}
+                      className="btn bg-red-800 hover:bg-white"
+                    >
                       Delete
                     </button>
                   </div>
