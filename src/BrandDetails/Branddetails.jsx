@@ -5,7 +5,10 @@ import Navbar from "../Navbar/Navbar";
 
 const Branddetails = () => {
   const [details, setDetails] = useState([]);
+
+  console.log("it a d", details);
   const { BrandName } = useParams();
+  // console.log(BrandName);
   useEffect(() => {
     fetch(` http://localhost:5000/product/${BrandName}`, {})
       .then((res) => res.json())
@@ -21,7 +24,8 @@ const Branddetails = () => {
       </h1>
       <div className="grid grid-cols-4 mt-10">
         {details.map((detail) => (
-          <div key={detail.id}>
+          <div key={detail._id}>
+            {/* <div className="text-white">{detail._id}</div> */}
             <div className="card w-96  bg-base-100 shadow-xl image-full mb-3">
               <figure>
                 <img src={detail.PhotoUrl}></img>
@@ -40,12 +44,12 @@ const Branddetails = () => {
                   <p>Rate:{detail.rating}</p>
                 </div>
                 <div className="card-actions ml-5">
-                  <Link to="/viewDetails">
+                  <Link to={`/viewDetails/${detail.brandName}`}>
                     <button className="btn hover:bg-orange-600">
                       View Details
                     </button>
                   </Link>
-                  <Link to={`/updateProduct/$(_id)`}>
+                  <Link to={`/updateProduct/${detail._id}`}>
                     <button className="btn hover:bg-orange-600">Update</button>
                   </Link>
                 </div>

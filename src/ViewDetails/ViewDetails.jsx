@@ -2,18 +2,23 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 const ViewDetails = () => {
+  // const viewDetail = useLoaderData();
+
+  // console.log(viewDetail);
+
   const [viewdetails, setviewDetails] = useState([]);
-  const { BrandName } = useParams();
+  const { brandName } = useParams();
   useEffect(() => {
-    fetch(` http://localhost:5000/product/${BrandName}`, {})
+    fetch(` http://localhost:5000/product/${brandName}`, {})
       .then((res) => res.json())
       .then((data) => {
+        console.log("abc", data);
         setviewDetails(data);
       });
-  }, [BrandName]);
+  }, [brandName]);
   return (
     <div>
-      <p className="text-white h-[600px]">{viewdetails.name}</p>
+      <p className="text-black">{viewdetails.brandName}</p>
     </div>
   );
 };
