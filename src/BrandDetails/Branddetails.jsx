@@ -44,7 +44,7 @@ const Branddetails = () => {
                   <p>Rate:{detail.rating}</p>
                 </div>
                 <div className="card-actions ml-5">
-                  <Link to={`/viewDetails/${detail.brandName}`}>
+                  <Link to={`/viewDetails/${detail._id}`}>
                     <button className="btn hover:bg-orange-600">
                       View Details
                     </button>
