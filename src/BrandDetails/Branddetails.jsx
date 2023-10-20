@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
 
 const Branddetails = () => {
   const [details, setDetails] = useState([]);
@@ -128,6 +129,7 @@ const Branddetails = () => {
           </div>
         </div>
       </section>
+      <Footer></Footer>
     </div>
   );
 };

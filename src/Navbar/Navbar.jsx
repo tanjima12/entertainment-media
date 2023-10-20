@@ -41,8 +41,8 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="ml-8 mr-8">
-      <div className="navbar ">
+    <div className="lg:ml-8 lg:mr-8">
+      <div className="ml-10 lg:navbar ">
         <div className="navbar-start">
           <div className="dropdown text-white">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -115,7 +115,7 @@ const Navbar = () => {
             )}
           </div>
         </div>
-        <label className="swap swap-rotate">
+        <label className="swap swap-rotate ml-40 mt-5">
           {/* this hidden checkbox controls the state */}
           <input onChange={handleTheme} type="checkbox" />
 
@@ -130,7 +130,7 @@ const Navbar = () => {
 
           {/* moon icon */}
           <svg
-            className="swap-off fill-current w-10 h-10"
+            className="swap-off fill-current text-white w-10 h-10"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
           >
