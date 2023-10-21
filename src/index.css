@@ -6,6 +6,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;600;700&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nosifer&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -20,7 +22,85 @@
   background-attachment: fixed;
 }
 .bannerbg {
-  background-image: url("https://i.ibb.co/Bzf0gPJ/assortment-cinema-elements-red-background-with-copy-space-1.jpg");
+  background-image: url("https://i.ibb.co/h9d30G2/2208-q703-021-S-m004-c12-FP-movie-film-cinema-poster-banner-1.jpg");
   background-position: cover;
   background-repeat: no-repeat;
+}
+
+.rotator {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+
+  height: 150px;
+  transform-style: preserve-3d;
+  animation: roter 15s linear infinite;
+  width: 55%;
+}
+
+.items {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  border: 2px solid white;
+}
+
+.items img {
+  height: 100%;
+  width: 100%;
+  transition: all 3s ease;
+}
+.items:hover img {
+  transform: scale(1.1);
+}
+
+@keyframes roter {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.items:first-child {
+  transform: rotateY(calc(40deg)) translateZ(300px);
+}
+
+.items:nth-child(2) {
+  transform: rotateY(calc(80deg)) translateZ(300px);
+}
+
+.items:nth-child(3) {
+  transform: rotateY(calc(120deg)) translateZ(300px);
+}
+
+.items:nth-child(4) {
+  transform: rotateY(calc(160deg)) translateZ(300px);
+}
+
+.items:nth-child(5) {
+  transform: rotateY(calc(200deg)) translateZ(300px);
+}
+
+.items:nth-child(6) {
+  transform: rotateY(calc(240deg)) translateZ(300px);
+}
+
+.items:nth-child(7) {
+  transform: rotateY(calc(280deg)) translateZ(300px);
+}
+
+.items:nth-child(8) {
+  transform: rotateY(calc(320deg)) translateZ(300px);
+}
+
+.items:nth-child(9) {
+  transform: rotateY(calc(360deg)) translateZ(300px);
+}
+
+.rotator:hover {
+  animation-play-state: paused;
 }

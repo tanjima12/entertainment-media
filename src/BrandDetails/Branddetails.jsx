@@ -73,7 +73,7 @@ const Branddetails = () => {
         <div className="carousel ml-72 mb-10 w-[1000px] h-96">
           <div id="slide1" className="carousel-item relative w-full">
             <img
-              src="https://i.ibb.co/wzDjqv2/film-1668918-1280.jpg"
+              src="https://i.ibb.co/64WHdn0/29651819-7509577.jpg"
               className="w-full"
             />
             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -87,7 +87,7 @@ const Branddetails = () => {
           </div>
           <div id="slide2" className="carousel-item relative w-full">
             <img
-              src="https://i.ibb.co/SKK30cw/movie-theater-4609877-1280.jpg"
+              src="https://i.ibb.co/TvwhWjr/29651823-7502758.jpg"
               className="w-full"
             />
             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -101,7 +101,7 @@ const Branddetails = () => {
           </div>
           <div id="slide3" className="carousel-item relative w-full">
             <img
-              src="https://i.ibb.co/2hq8Sdx/Screenshot-96.png"
+              src="https://i.ibb.co/pbH6L2R/13306841-Kerfin7-NEA-2201.jpg"
               className="w-full"
             />
             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">

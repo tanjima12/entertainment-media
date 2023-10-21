@@ -7,6 +7,8 @@ export default {
       pixelify: "'Pixelify Sans', sans-serif",
       orbitron: "'Orbitron', sans-serif",
       poppins: "'Poppins', sans-serif",
+      Nossifer: "'Nosifer', sans-serif",
+      satisfy: "'Satisfy', cursive",
     },
     extend: {},
   },

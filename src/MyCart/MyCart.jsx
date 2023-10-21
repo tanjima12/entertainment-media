@@ -45,7 +45,7 @@ const MyCart = () => {
         <div className=" ml-10 mt-10 grid grid-cols-3 ">
           {myCartCollection.map((cart) => (
             <div key={cart._id}>
-              <div className="card card-compact w-96 bg-base-100 shadow-xl">
+              <div className="card card-compact w-96 bg-base-100 shadow-xl mt-5">
                 <figure>
                   <img src={cart.PhotoUrl}></img>
                 </figure>

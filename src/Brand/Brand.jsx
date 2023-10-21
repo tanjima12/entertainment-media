@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import { useNavigate } from "react-router-dom";
-import Footer from "../Footer/Footer";
 
 const Brand = ({ brand }) => {
   const { BrandName, image } = brand;
@@ -12,9 +11,9 @@ const Brand = ({ brand }) => {
     <div>
       <div
         onClick={handleBrandDetails}
-        className="relative flex ml-10 mb-8 max-w-[34rem] h-[28rem] flex-col rounded-xl bg-teal-800  bg-clip-border text-gray-700 shadow-md"
+        className="relative flex ml-10 mb-8 max-w-[26rem] h-[28rem] flex-col rounded-full  bg-purple-700 bg-gradient-to-r from-purple-800 via-red-600 to-yellow-200 bg-clip-border text-gray-700 shadow-md"
       >
-        <div className="relative m-0 overflow-hidden text-gray-700 bg-transparent rounded-none shadow-none bg-clip-border">
+        <div className="relative m-0 overflow-hidden text-gray-700 bg-transparent rounded-3xl shadow-none bg-clip-border">
           <img src={image} alt="ui/ux review check" />
         </div>
         <div className="p-6">

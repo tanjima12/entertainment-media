@@ -13,7 +13,8 @@ const UpdateProduct = () => {
     const type = form.type.value;
     const price = form.price.value;
     const rating = form.rating.value;
-    const updateInfo = { brandName, name, type, price, rating };
+    const PhotoUrl = form.image.value;
+    const updateInfo = { brandName, name, type, price, rating, PhotoUrl };
 
     console.log(updateInfo);
     fetch(`http://localhost:5000/updated/${_id}`, {
@@ -34,7 +35,7 @@ const UpdateProduct = () => {
         console.error(error);
       });
   };
-  const { brandName, name, type, price, rating, _id } = Info;
+  const { brandName, name, type, price, rating, _id, PhotoUrl } = Info;
   return (
     <div>
       <Navbar></Navbar>
@@ -120,7 +121,25 @@ const UpdateProduct = () => {
                     name="rating"
                     defaultValue={rating}
                     placeholder="Rating"
-                    className="input input-bordered bg-slate-200  w-96"
+                    className="input input-bordered bg-white  w-96"
+                  />
+                </label>
+              </div>
+            </div>
+            <div className="flex mb-5 ml-5 gap-16">
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text text-white text-2xl ">
+                    Photo Url
+                  </span>
+                </label>
+                <label className="input-group">
+                  <input
+                    type="text"
+                    name="image"
+                    defaultValue={PhotoUrl}
+                    placeholder="PhotoUrl"
+                    className="input input-bordered bg-white  w-96"
                   />
                 </label>
               </div>

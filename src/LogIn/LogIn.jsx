@@ -19,7 +19,10 @@ const LogIn = () => {
       .then((result) => {
         const user = result.user;
         console.log(result.user);
+
         setFinalUser(user);
+        navigate(location.state ? location?.state : "/");
+        return swal("SuccessFully log in");
       })
       .catch((error) => {
         console.error(error);
