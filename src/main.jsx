@@ -55,9 +55,11 @@ const router = createBrowserRouter([
             <ViewDetails></ViewDetails>
           </PrivateRoute>
         ),
-        // loader: () => fetch("http://localhost:5000/product"),
+        // loader: () => fetch("https://entertainment-media.vercel.app/product"),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/productDetails/${params.id}`),
+          fetch(
+            `https://entertainment-media.vercel.app/productDetails/${params.id}`
+          ),
       },
       {
         path: "/updateProduct/:id",
@@ -67,7 +69,9 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/updateProduct/${params.id}`),
+          fetch(
+            `https://entertainment-media.vercel.app/updateProduct/${params.id}`
+          ),
       },
       {
         path: "/myCart",
@@ -76,7 +80,8 @@ const router = createBrowserRouter([
             <MyCart></MyCart>
           </PrivateRoute>
         ),
-        loader: () => fetch("http://localhost:5000/CartCollect"),
+        loader: () =>
+          fetch("https://entertainment-media.vercel.app/CartCollect"),
       },
     ],
   },

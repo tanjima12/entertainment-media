@@ -13,7 +13,7 @@ const ViewDetails = () => {
     const card = { ...viewDetail };
     delete card._id;
 
-    fetch("http://localhost:5000/cartProduct", {
+    fetch("https://entertainment-media.vercel.app/cartProduct", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -35,7 +35,7 @@ const ViewDetails = () => {
   // const [viewdetails, setviewDetails] = useState([]);
   // const { brandName } = useParams();
   // useEffect(() => {
-  //   fetch(` http://localhost:5000/product/${brandName}`, {})
+  //   fetch(` https://entertainment-media.vercel.app/product/${brandName}`, {})
   //     .then((res) => res.json())
   //     .then((data) => {
   //       console.log("abc", data);

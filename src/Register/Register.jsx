@@ -2,10 +2,11 @@ import { useContext } from "react";
 import Navbar from "../Navbar/Navbar";
 import { AuthContexts } from "../AuthProvider/AuthProvider";
 import swal from "sweetalert";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 
 const Register = () => {
-  const { createUser } = useContext(AuthContexts);
+  const { createUser, updateUser } = useContext(AuthContexts);
+
   const handleRegister = (e) => {
     e.preventDefault();
     console.log(e.currentTarget);
@@ -13,8 +14,9 @@ const Register = () => {
     const email = form.get("email");
     const password = form.get("password");
     const name = form.get("name");
+    const photo = form.get("photo");
 
-    console.log(email, password, name);
+    console.log(email, password, name, photo);
 
     if (password.length < 6) {
       return swal("Sorry!", "...Your password character is less than 6!");
@@ -28,7 +30,11 @@ const Register = () => {
 
     createUser(email, password)
       .then((result) => {
-        console.log(result.user);
+        updateUser(name, photo).then(() => {
+          console.log(result.user);
+          Navigate("/");
+        });
+        // console.log(result.user);
       })
       .catch((error) => console.error(error));
   };
@@ -51,6 +57,14 @@ const Register = () => {
                 type="text"
                 name="name"
                 required
+              />
+            </div>
+            <div className="relative h-11 w-full min-w-[200px]">
+              <input
+                className="peer h-full w-full rounded-md border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+                placeholder="Photo"
+                type="text"
+                name="photo"
               />
             </div>
             <div className="relative h-11 w-full min-w-[200px]">
