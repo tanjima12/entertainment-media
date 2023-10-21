@@ -3,9 +3,11 @@ import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 
 import Swal from "sweetalert2";
+import { useState } from "react";
 
 const MyCart = () => {
   const myCartCollection = useLoaderData();
+  const [media, setMedia] = useState(myCartCollection);
   const { _id } = myCartCollection;
   console.log(_id);
 
@@ -31,6 +33,7 @@ const MyCart = () => {
           .then((res) => res.json())
           .then((data) => {
             console.log(data);
+            setMedia(media.filter((type) => type._id !== _id));
           });
 
         Swal.fire("Deleted!", "Your file has been deleted.", "success");
@@ -43,7 +46,7 @@ const MyCart = () => {
       <div>
         <h1 className="text-4xl text-white text-center">My Cart</h1>
         <div className=" ml-10 mt-10 grid grid-cols-3 ">
-          {myCartCollection.map((cart) => (
+          {media.map((cart) => (
             <div key={cart._id}>
               <div className="card card-compact w-96 bg-base-100 shadow-xl mt-5">
                 <figure>
