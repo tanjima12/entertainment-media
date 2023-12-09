@@ -19,7 +19,7 @@ const Banner = () => {
             className="input input-bordered w-[500px]"
           />
           <button className="btn hover:bg-rose-300 btn-squareb bg-red-800 text-white">
-            GO NOW
+            Lets Go
           </button>
         </div>
       </div>
