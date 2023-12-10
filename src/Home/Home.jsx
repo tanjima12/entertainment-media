@@ -8,7 +8,7 @@ import Footer from "../Footer/Footer";
 import Kids from "../Kids/Kids";
 import TVSection from "../TVSection/TVSection";
 
-// https://entertainment-media.vercel.app/product
+// http://localhost:5000/product
 
 const Home = () => {
   const brandInfo = useLoaderData();
@@ -26,7 +26,7 @@ const Home = () => {
           <h1 className="text-[#b18db3] font-turrerRod font-semibold text-5xl mt-10 mb-8 text-center">
             Our Some Selected Brand <br></br> Which we Provide you
           </h1>
-          <div className="grid grid-cols-1 lg:grid-cols-3 mr-10">
+          <div className="grid grid-cols-1 lg:grid-cols-3 mr-10 mb-5">
             {brandInfo.map((brand) => (
               <Brand key={brand.id} brand={brand}></Brand>
             ))}

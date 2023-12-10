@@ -17,13 +17,17 @@ const UpdateProduct = () => {
     const updateInfo = { brandName, name, type, price, rating, PhotoUrl };
 
     console.log(updateInfo);
-    fetch(`https://entertainment-media.vercel.app/updated/${_id}`, {
-      method: "PUT",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(updateInfo),
-    })
+    fetch(
+      `http://localhost:5000
+/updated/${_id}`,
+      {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(updateInfo),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

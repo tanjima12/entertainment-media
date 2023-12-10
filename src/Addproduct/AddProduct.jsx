@@ -21,7 +21,7 @@ const AddProduct = () => {
       PhotoUrl,
     };
     console.log(addProductInfo);
-    fetch("https://entertainment-media.vercel.app/product", {
+    fetch("http://localhost:5000/product", {
       method: "POST",
       headers: {
         "content-type": "application/json",
