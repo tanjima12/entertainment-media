@@ -18,7 +18,7 @@ const UpdateProduct = () => {
 
     console.log(updateInfo);
     fetch(
-      `http://localhost:5000
+      `https://entertainment-media-18bcayzop-tanjima-akters-projects.vercel.app
 /updated/${_id}`,
       {
         method: "PUT",

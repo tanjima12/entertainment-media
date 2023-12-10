@@ -13,13 +13,16 @@ const ViewDetails = () => {
     const card = { ...viewDetail };
     delete card._id;
 
-    fetch("http://localhost:5000/cartProduct", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(card),
-    })
+    fetch(
+      "https://entertainment-media-18bcayzop-tanjima-akters-projects.vercel.app/cartProduct",
+      {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(card),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -35,7 +38,7 @@ const ViewDetails = () => {
   // const [viewdetails, setviewDetails] = useState([]);
   // const { brandName } = useParams();
   // useEffect(() => {
-  //   fetch(` http://localhost:5000/product/${brandName}`, {})
+  //   fetch(` https://entertainment-media-18bcayzop-tanjima-akters-projects.vercel.app/product/${brandName}`, {})
   //     .then((res) => res.json())
   //     .then((data) => {
   //       console.log("abc", data);

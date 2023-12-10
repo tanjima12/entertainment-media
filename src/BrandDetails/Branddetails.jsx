@@ -12,7 +12,7 @@ const Branddetails = () => {
   // console.log(BrandName);
   useEffect(() => {
     fetch(
-      ` http://localhost:5000
+      ` https://entertainment-media-18bcayzop-tanjima-akters-projects.vercel.app
 /product/${BrandName}`,
       {}
     )

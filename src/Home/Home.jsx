@@ -8,7 +8,7 @@ import Footer from "../Footer/Footer";
 import Kids from "../Kids/Kids";
 import TVSection from "../TVSection/TVSection";
 
-// http://localhost:5000/product
+// https://entertainment-media-18bcayzop-tanjima-akters-projects.vercel.app/product
 
 const Home = () => {
   const brandInfo = useLoaderData();
