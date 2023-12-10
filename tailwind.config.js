@@ -9,6 +9,7 @@ export default {
       poppins: "'Poppins', sans-serif",
       Nossifer: "'Nosifer', sans-serif",
       satisfy: "'Satisfy', cursive",
+      Ysabeau: "'Ysabeau', sans-serif",
     },
     extend: {},
   },

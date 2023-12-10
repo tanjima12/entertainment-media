@@ -23,8 +23,8 @@ const Home = () => {
       </div>
       <div className="">
         <div>
-          <h1 className="text-[#b18db3] font-turrerRod font-semibold text-5xl mt-10 mb-8 text-center">
-            Our Some Selected Brand <br></br> Which we Provide you
+          <h1 className="text-white font-Ysabeau font-semibold text-5xl mt-10 mb-8 text-center">
+            We offer a select range of <br></br> brands for you.
           </h1>
           <div className="grid grid-cols-1 lg:grid-cols-3 mr-10 mb-5">
             {brandInfo.map((brand) => (
