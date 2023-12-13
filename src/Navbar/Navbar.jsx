@@ -29,13 +29,22 @@ const Navbar = () => {
   };
   const navlist = (
     <>
-      <NavLink to="/" className="mr-5">
+      <NavLink
+        to="/"
+        className="mr-5 bg-gradient-to-r from-[#4a9b9b] to-[#cdebf4] text-transparent bg-clip-text "
+      >
         Home
       </NavLink>
-      <NavLink to="/addProduct" className="mr-5">
+      <NavLink
+        to="/addProduct"
+        className="mr-5 bg-gradient-to-r from-[#4a9b9b] to-[#cdebf4] text-transparent bg-clip-text"
+      >
         Add Product
       </NavLink>
-      <NavLink to="/myCart" className="mr-5">
+      <NavLink
+        to="/myCart"
+        className="mr-5 bg-gradient-to-r from-[#4a9b9b] to-[#cdebf4] text-transparent bg-clip-text"
+      >
         My Cart
       </NavLink>
     </>
@@ -108,8 +117,8 @@ const Navbar = () => {
             </a>
           </div>
         </div>
-        <div className="navbar-center hidden lg:flex ">
-          <ul className="menu menu-horizontal px-1 text-white text-3xl font-poppins">
+        <div className="navbar-center mr-48 hidden lg:flex ">
+          <ul className="menu menu-horizontal px-1  text-2xl font-poppins font-bold">
             {navlist}
             <label className="swap swap-rotat">
               {/* this hidden checkbox controls the state */}
@@ -126,7 +135,7 @@ const Navbar = () => {
 
               {/* moon icon */}
               <svg
-                className="swap-off fill-current text-white w-10 h-8"
+                className="swap-off fill-current text-blue-300  w-10 h-8"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
               >
@@ -147,16 +156,16 @@ const Navbar = () => {
                 <p className="text-white">{user.displayName}</p>
                 <button
                   onClick={handleSignout}
-                  className="btn btn-outline bg-red-200 px-10 border-none mr-3"
+                  className="btn btn-outline bg-gradient- px-10 border-none mr-3"
                 >
                   Log Out
                 </button>
               </>
             ) : (
               <>
-                <FaUserAlt className="text-3xl text-white"></FaUserAlt>
+                <FaUserAlt className="text-3xl text-blue-300"></FaUserAlt>
                 <Link to="/login">
-                  <button className="btn btn-outline bg-red-200 px-10 border-none mr-10">
+                  <button className="btn btn-outline bg-gradient-to-r from-[#00d2ff] to-[#928dab] px-5 border-none mr-20">
                     LogIn
                   </button>
                 </Link>
