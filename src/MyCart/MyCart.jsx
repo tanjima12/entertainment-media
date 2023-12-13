@@ -25,7 +25,7 @@ const MyCart = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         fetch(
-          `https://entertainment-media-18bcayzop-tanjima-akters-projects.vercel.app
+          `http://localhost:5000
 /CartCollect/${_id}`,
           {
             method: "DELETE",

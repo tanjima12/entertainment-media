@@ -10,6 +10,7 @@ export default {
       Nossifer: "'Nosifer', sans-serif",
       satisfy: "'Satisfy', cursive",
       Ysabeau: "'Ysabeau', sans-serif",
+      serif: "'DM Serif Display', serif",
     },
     extend: {},
   },

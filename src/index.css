@@ -11,20 +11,22 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Ysabeau:ital,wght@0,400;0,500;1,600;1,700&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.homebg {
+/* .homebg {
   background-image: url("https://i.ibb.co/TM4Np3N/Untitled-1.jpg");
   background-size: cover;
   /* background-color: black;
   opacity: 100%; */
-  background-repeat: no-repeat;
+/* background-repeat: no-repeat;
   background-attachment: fixed;
-}
+} */
 .bannerbg {
-  background-image: url("https://i.ibb.co/h9d30G2/2208-q703-021-S-m004-c12-FP-movie-film-cinema-poster-banner-1.jpg");
+  background-image: url("https://i.ibb.co/9vxfgmb/image-12.jpg");
   background-position: cover;
   background-repeat: no-repeat;
 }

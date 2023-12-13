@@ -92,15 +92,19 @@ const Navbar = () => {
           </div>
           <div className="flex gap-3 items-center">
             <img
-              className="h-32 rounded-xl pt-5"
-              src="https://i.ibb.co/VSL6R68/3d-render-music-note-illustration-design.jpg"
+              className="h-20 w-16 rounded-full pt-5"
+              src="https://i.ibb.co/rZZT72D/4785284-2516144.jpg"
             ></img>
-            <a className=" text-white text-xl">
-              <span className="text-xl"> M</span>
-              <span className="text-6xl text-orange-700  font-satisfy font-bold">
+            <a className=" text-white text-xl flex items-center mt-4 ">
+              <span className="text-xl bg-gradient-to-r from-[#CFE7fA] to-[#6393C1] text-transparent bg-clip-text font-bold">
+                M
+              </span>
+              <span className="text-5xl bg-gradient-to-r from-[#de09c2] to-[#00FFE1] text-transparent bg-clip-text mr-2  font-serif font-bold">
                 O
               </span>
-              ment
+              <span className="bg-gradient-to-r from-[#CFE7fA] to-[#6393C1] text-transparent bg-clip-text">
+                ment
+              </span>
             </a>
           </div>
         </div>

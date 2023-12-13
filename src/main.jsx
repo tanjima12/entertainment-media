@@ -55,11 +55,9 @@ const router = createBrowserRouter([
             <ViewDetails></ViewDetails>
           </PrivateRoute>
         ),
-        // loader: () => fetch("https://entertainment-media-18bcayzop-tanjima-akters-projects.vercel.app/product"),
+        // loader: () => fetch("http://localhost:5000/product"),
         loader: ({ params }) =>
-          fetch(
-            `https://entertainment-media-18bcayzop-tanjima-akters-projects.vercel.app/productDetails/${params.id}`
-          ),
+          fetch(`http://localhost:5000/productDetails/${params.id}`),
       },
       {
         path: "/updateProduct/:id",
@@ -69,9 +67,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(
-            `https://entertainment-media-18bcayzop-tanjima-akters-projects.vercel.app/updateProduct/${params.id}`
-          ),
+          fetch(`http://localhost:5000/updateProduct/${params.id}`),
       },
       {
         path: "/myCart",
@@ -80,10 +76,7 @@ const router = createBrowserRouter([
             <MyCart></MyCart>
           </PrivateRoute>
         ),
-        loader: () =>
-          fetch(
-            "https://entertainment-media-18bcayzop-tanjima-akters-projects.vercel.app/CartCollect"
-          ),
+        loader: () => fetch("http://localhost:5000/CartCollect"),
       },
     ],
   },

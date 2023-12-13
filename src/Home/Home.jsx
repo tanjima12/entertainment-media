@@ -8,17 +8,16 @@ import Footer from "../Footer/Footer";
 import Kids from "../Kids/Kids";
 import TVSection from "../TVSection/TVSection";
 
-// https://entertainment-media-18bcayzop-tanjima-akters-projects.vercel.app/product
+// http://localhost:5000/product
 
 const Home = () => {
   const brandInfo = useLoaderData();
 
   return (
     <div className="">
-      <div className="">
+      <div className="bannerbg">
         <Navbar></Navbar>
-      </div>
-      <div>
+
         <Banner></Banner>
       </div>
       <div className="">

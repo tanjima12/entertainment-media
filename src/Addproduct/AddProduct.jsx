@@ -21,16 +21,13 @@ const AddProduct = () => {
       PhotoUrl,
     };
     console.log(addProductInfo);
-    fetch(
-      "https://entertainment-media-18bcayzop-tanjima-akters-projects.vercel.app/product",
-      {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(addProductInfo),
-      }
-    )
+    fetch("http://localhost:5000/product", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(addProductInfo),
+    })
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
