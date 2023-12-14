@@ -108,3 +108,14 @@
 .rotator:hover {
   animation-play-state: paused;
 }
+.ml15 {
+  font-weight: 700;
+  font-size: 3.5em;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+}
+
+.ml15 .word {
+  display: inline-block;
+  line-height: 1em;
+}
