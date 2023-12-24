@@ -15,6 +15,7 @@ import Branddetails from "./BrandDetails/Branddetails";
 import UpdateProduct from "./UpdateProduct/UpdateProduct";
 import ViewDetails from "./ViewDetails/ViewDetails";
 import MyCart from "./MyCart/MyCart";
+import MemberShip from "./MemberShip";
 
 const router = createBrowserRouter([
   {
@@ -77,6 +78,10 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: () => fetch("http://localhost:5000/CartCollect"),
+      },
+      {
+        path: "/member",
+        element: <MemberShip></MemberShip>,
       },
     ],
   },

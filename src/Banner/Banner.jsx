@@ -1,6 +1,19 @@
+import { useState } from "react";
 import Marquee from "react-fast-marquee";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
+  const [email, setEmail] = useState("");
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+  const handleEmailClick = () => {
+    if (email.trim() !== "") {
+      console.log("lets go clicked");
+    } else {
+      console.log("email is required");
+    }
+  };
   anime
     .timeline({ loop: true })
     .add({
@@ -43,13 +56,30 @@ const Banner = () => {
         <div className="form-control lg:ml-[420px]">
           <div className="input-group mt-3">
             <input
-              type="text"
-              placeholder="email"
+              type="email"
+              placeholder="Enter Your email"
               className="input bg-transparent input-bordered border-blue-200 text-white w-[500px]"
+              onChange={handleEmailChange}
+              required
             />
-            <button className="btn hover:bg-rose-300 bg-gradient-to-t from-[#00d2ff] to-[#928dab]  btn-squareb font-bold">
-              Lets Go
-            </button>
+            {email.trim() !== "" ? (
+              <Link to="/member">
+                <button
+                  onClick={handleEmailClick}
+                  className="btn hover:bg-rose-300 bg-gradient-to-t from-[#00d2ff] to-[#928dab]  btn-squareb font-bold"
+                >
+                  Lets Go
+                </button>
+              </Link>
+            ) : (
+              <button
+                onClick={handleEmailClick}
+                disabled
+                className="btn hover:bg-rose-300 bg-gradient-to-t from-[#00d2ff] to-[#928dab]  btn-squareb font-bold"
+              >
+                Lets Go
+              </button>
+            )}
           </div>
         </div>
       </div>
