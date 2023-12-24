@@ -1,3 +1,5 @@
+import Marquee from "react-fast-marquee";
+
 const Banner = () => {
   anime
     .timeline({ loop: true })
@@ -33,28 +35,32 @@ const Banner = () => {
           and more
         </span>
       </h1>
-      {/* <h1 className="">
-        , , 
-      </h1> */}
-      <p className="text-white font-poppins mt-2 text-xl mb-10 text-center">
-        Watch anywhere. Cancel anytime.
-      </p>
-      <p className="text-[#E41B17] font-semibold font-poppins mt-5 text-xl mb-2 text-center">
-        Ready to watch? Enter your email to create or restart your membership.
-      </p>
-
-      <div className="form-control lg:ml-[520px]">
-        <div className="input-group">
-          <input
-            type="text"
-            placeholder="email"
-            className="input input-bordered w-[500px]"
-          />
-          <button className="btn hover:bg-rose-300 btn-squareb bg-red-800 text-white">
-            Lets Go
-          </button>
+      <div className="mt-12">
+        <p className="text-emerald-300 font-semibold font-poppins mt-5 text-xl mb-2 text-center">
+          Ready to watch?<br></br> Enter your email to create or restart your
+          membership.
+        </p>
+        <div className="form-control lg:ml-[420px]">
+          <div className="input-group mt-3">
+            <input
+              type="text"
+              placeholder="email"
+              className="input bg-transparent input-bordered border-blue-200 text-white w-[500px]"
+            />
+            <button className="btn hover:bg-rose-300 bg-gradient-to-t from-[#00d2ff] to-[#928dab]  btn-squareb font-bold">
+              Lets Go
+            </button>
+          </div>
         </div>
       </div>
+      <Marquee>
+        <p className="text-white mt-12 text-2xl font-extralight font-bold mb-10 text-center ">
+          Unleash the Magic of Entertainment! Dive into a world of captivating
+          content on our media hub. Explore the latest in movies,music, gaming,
+          and more.Your ultimate destination for endless entertainment awaits –
+          where excitement knows no bounds!
+        </p>
+      </Marquee>
     </div>
   );
 };

@@ -11,11 +11,7 @@ const Branddetails = () => {
   const { BrandName } = useParams();
   // console.log(BrandName);
   useEffect(() => {
-    fetch(
-      ` http://localhost:5000
-/product/${BrandName}`,
-      {}
-    )
+    fetch(` http://localhost:5000/product/${BrandName}`, {})
       .then((res) => res.json())
       .then((data) => {
         setDetails(data);
