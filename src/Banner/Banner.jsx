@@ -66,18 +66,17 @@ const Banner = () => {
               <Link to="/member">
                 <button
                   onClick={handleEmailClick}
-                  className="btn hover:bg-rose-300 bg-gradient-to-t from-[#00d2ff] to-[#928dab]  btn-squareb font-bold"
+                  className="btn rounded-tl-none rounded-bl-none cursor-pointer hover:bg-rose-300 bg-gradient-to-t from-[#00d2ff] to-[#928dab] text-black  font-bold"
                 >
                   Lets Go
                 </button>
               </Link>
             ) : (
               <button
-                onClick={handleEmailClick}
                 disabled
-                className="btn hover:bg-rose-300 bg-gradient-to-t from-[#00d2ff] to-[#928dab]  btn-squareb font-bold"
+                className="btn hover:bg-rose-300 bg-gradient-to-t from-[#00d2ff] to-[#928dab]   font-bold"
               >
-                Lets Go
+                <p className="text-black">Lets Go</p>
               </button>
             )}
           </div>
