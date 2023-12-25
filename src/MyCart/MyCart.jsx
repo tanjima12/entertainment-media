@@ -4,6 +4,7 @@ import Footer from "../Footer/Footer";
 
 import Swal from "sweetalert2";
 import { useState } from "react";
+import "./MyCart.css";
 
 const MyCart = () => {
   const myCartCollection = useLoaderData();

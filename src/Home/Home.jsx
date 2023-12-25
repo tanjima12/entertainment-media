@@ -7,6 +7,7 @@ import Brand from "../Brand/Brand";
 import Footer from "../Footer/Footer";
 import Kids from "../Kids/Kids";
 import TVSection from "../TVSection/TVSection";
+import { TypeAnimation } from "react-type-animation";
 
 // http://localhost:5000/product
 
@@ -22,10 +23,33 @@ const Home = () => {
       </div>
       <div className="">
         <div>
-          <h1 className="text-white font-Ysabeau font-semibold text-5xl mt-10 mb-8 text-center">
-            We offer a select range of <br></br> brands for you.
+          <h1 className="text-[#A0CFEC] font-thin  text-2xl mt-10 mb-14 text-center ">
+            <TypeAnimation
+              sequence={[
+                "We",
+                500,
+                "We offer", //  Continuing previous Text
+                500,
+                "We offer a ",
+                500,
+                "We offer a select",
+                500,
+                "We offer a select range",
+                500,
+                "We offer a select range of",
+                500,
+                "We offer a select range of brands",
+                500,
+
+                "We offer a select range of brands for",
+                500,
+                "We offer a select range of brands for you",
+              ]}
+              style={{ fontSize: "2em" }}
+              repeat={Infinity}
+            />
           </h1>
-          <div className="grid grid-cols-1 lg:grid-cols-3 mr-10 mb-5">
+          <div className="grid grid-cols-1  mr-10 mb-5">
             {brandInfo.map((brand) => (
               <Brand key={brand.id} brand={brand}></Brand>
             ))}

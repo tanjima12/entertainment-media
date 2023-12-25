@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useNavigate } from "react-router-dom";
+import "./Brand.css";
 
 const Brand = ({ brand }) => {
   const { BrandName, image } = brand;
@@ -8,11 +9,22 @@ const Brand = ({ brand }) => {
     navigate(`/brandDetails/${BrandName}`);
   };
   return (
-    <div
-      onClick={handleBrandDetails}
-      className="flex flex-col items-center justify-center w-full max-w-sm mx-auto mb-8"
-    >
+    <div className="flex flex-col items-center justify-center w-full max-w-sm mx-auto mb-8">
       <div
+        className="card"
+        style={{ backgroundImage: `url(${image})`, backgroundSize: "cover" }}
+      >
+        <span></span>
+
+        <div className="content">
+          <h1 onClick={handleBrandDetails}>
+            {BrandName}
+            <br></br>
+            Click For Details
+          </h1>
+        </div>
+      </div>
+      {/* <div
         className="w-full h-64 bg-gray-300 bg-center bg-cover rounded-lg shadow-md"
         style={{ backgroundImage: `url(${image})` }}
       ></div>
@@ -30,21 +42,8 @@ const Brand = ({ brand }) => {
             Add to cart
           </button>
         </div>
-      </div>
+      </div> */}
     </div>
-    // {/* <div
-    //   onClick={handleBrandDetails}
-    //   className="relative flex ml-10 mb-8 max-w-[26rem] h-[28rem] flex-col rounded-full  bg-purple-700 bg-gradient-to-r from-purple-800 via-red-600 to-yellow-200 bg-clip-border text-gray-700 shadow-md"
-    // >
-    //   <div className="relative m-0 overflow-hidden text-gray-700 bg-transparent rounded-3xl shadow-none bg-clip-border">
-    //     <img src={image} alt="ui/ux review check" />
-    //   </div>
-    //   <div className="p-6">
-    //     <h4 className="block text-3xl text-center antialiased font-semibold leading-snug tracking-normal text-[#c6d8e7] font-pixelify">
-    //       {BrandName}
-    //     </h4>
-    //   </div>
-    // </div> */}
   );
 };
 
