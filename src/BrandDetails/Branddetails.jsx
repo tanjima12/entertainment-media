@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import { Rating } from "@smastrom/react-rating";
@@ -9,9 +9,13 @@ import "@smastrom/react-rating/style.css";
 import "./BrandDetails.css";
 import { FaEdit } from "react-icons/fa";
 import { AiOutlineDeleteRow } from "react-icons/ai";
+import Swal from "sweetalert2";
 
 const Branddetails = () => {
   const [details, setDetails] = useState([]);
+  // const myCartCollection = useLoaderData();
+  // const [media, setMedia] = useState(myCartCollection);
+  // const { _id } = myCartCollection;
 
   console.log("it a d", details);
   const { BrandName } = useParams();
@@ -23,6 +27,40 @@ const Branddetails = () => {
         setDetails(data);
       });
   }, [BrandName]);
+
+  const handleDelete = (_id) => {
+    console.log(_id);
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(
+          `http://localhost:5000
+/CartCollect/${_id}`,
+          {
+            method: "DELETE",
+            headers: {
+              "Content-type": "application/json",
+            },
+          }
+        )
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+
+            setDetails(details.filter((type) => type._id !== _id));
+          });
+
+        Swal.fire("Deleted!", "Your file has been deleted.", "success");
+      }
+    });
+  };
   return (
     <div className=" mr-10 ml-10">
       <Navbar></Navbar>
@@ -95,7 +133,10 @@ const Branddetails = () => {
                       </button>
                     </Link>
 
-                    <button className="button">
+                    <button
+                      onClick={() => handleDelete(detail._id)}
+                      className="button"
+                    >
                       <AiOutlineDeleteRow className="text-[#c19a6b] " />
                       <span className="lable text-[#c19a6b]">Delete</span>
                     </button>

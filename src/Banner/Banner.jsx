@@ -74,9 +74,9 @@ const Banner = () => {
             ) : (
               <button
                 disabled
-                className="btn hover:bg-rose-300 bg-gradient-to-t from-[#00d2ff] to-[#928dab]   font-bold"
+                className="btn hover:bg-rose-300 bg-gradient-to-t from-[#7fc2d1] to-[#928dab]   font-bold"
               >
-                <p className="text-black">Lets Go</p>
+                Lets Go
               </button>
             )}
           </div>

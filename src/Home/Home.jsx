@@ -8,6 +8,7 @@ import Footer from "../Footer/Footer";
 import Kids from "../Kids/Kids";
 import TVSection from "../TVSection/TVSection";
 import { TypeAnimation } from "react-type-animation";
+import MostFamousMovie from "../MostFamousMov/MostFamousMovie";
 
 // http://localhost:5000/product
 
@@ -56,6 +57,9 @@ const Home = () => {
           </div>
         </div>
         <hr></hr>
+        <div className="mb-20">
+          <MostFamousMovie></MostFamousMovie>
+        </div>
         <div>
           <TVSection></TVSection>
         </div>

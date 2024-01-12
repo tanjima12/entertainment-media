@@ -16,12 +16,12 @@ const Brand = ({ brand }) => {
       >
         <span></span>
 
-        <div className="content">
-          <h1 onClick={handleBrandDetails}>
-            {BrandName}
-            <br></br>
+        <div className="content flex flex-col">
+          <h1 className="text-amber-100">{BrandName}</h1>
+
+          <p onClick={handleBrandDetails} className="text-[#DB9370]">
             Click For Details
-          </h1>
+          </p>
         </div>
       </div>
       {/* <div

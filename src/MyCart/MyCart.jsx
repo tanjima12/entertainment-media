@@ -49,11 +49,11 @@ const MyCart = () => {
     <div className="pb-10">
       <Navbar></Navbar>
       <div>
-        <h1 className="text-4xl text-white text-center">My Cart</h1>
+        <h1 className="text-4xl text-center">My Cart</h1>
         <div className=" ml-10 mt-10 grid grid-cols-3 ">
           {media.map((cart) => (
             <div key={cart._id}>
-              <div className="card card-compact w-96 bg-base-100 shadow-xl mt-5">
+              <div className="card card-compact w-96  shadow-xl mt-5">
                 <figure>
                   <img src={cart.PhotoUrl}></img>
                 </figure>

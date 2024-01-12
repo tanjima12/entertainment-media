@@ -11,6 +11,7 @@ export default {
       satisfy: "'Satisfy', cursive",
       Ysabeau: "'Ysabeau', sans-serif",
       serif: "'DM Serif Display', serif",
+      julius: "'Julius Sans One', sans-serif",
     },
     extend: {},
   },

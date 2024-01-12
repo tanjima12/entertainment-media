@@ -1,0 +1,41 @@
+.slider {
+  height: 250px;
+  margin: auto;
+  position: relative;
+
+  display: grid;
+  place-items: center;
+}
+.slide-track {
+  display: flex;
+  width: calc(250 * 8);
+  margin-top: 30px;
+
+  animation: scroll 40s linear infinite;
+}
+.slide-track:hover {
+  animation-play-state: paused;
+}
+.slide {
+  width: 450px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  perspective: 100px;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 4));
+  }
+}
+img {
+  height: 250px;
+  border-radius: 10px;
+  transition: transform 1s;
+}
+img:hover {
+  transform: translateZ(22px);
+}
