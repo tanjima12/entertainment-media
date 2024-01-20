@@ -9,6 +9,7 @@ import Kids from "../Kids/Kids";
 import TVSection from "../TVSection/TVSection";
 import { TypeAnimation } from "react-type-animation";
 import MostFamousMovie from "../MostFamousMov/MostFamousMovie";
+import Question from "../Question/Question";
 
 // http://localhost:5000/product
 
@@ -60,10 +61,14 @@ const Home = () => {
         <div className="mb-20">
           <MostFamousMovie></MostFamousMovie>
         </div>
+
         <div>
           <TVSection></TVSection>
         </div>
         <hr></hr>
+        <div>
+          <Question></Question>
+        </div>
         <div>
           <Kids></Kids>
         </div>

@@ -1,13 +1,19 @@
+import "./TVSection.css";
+
 const TVSection = () => {
   return (
-    <div className="lg:flex justify-center gap-56 ml-10 lg:ml-20 mt-10 lg:mt-28 mb-32">
+    <div className="lg:flex justify-evenly ml-10 mt-10 lg:mt-28 mb-32">
       <div>
-        <h1 className="text-white text-5xl font-satisfy mt-10">
-          Enjoy on your TV
-        </h1>
-        <p className="text-white text-xl">
-          Watch on Smart TVs, Playstation, Xbox, Chromecast,<br></br> Apple TV,
-          Blu-ray players, and more.
+        <p className="text-white font-satisfy">
+          <span className="text-5xl text-gray-400">E</span>
+          <span className="font-Ysabeau text-[18px]">
+            xperience entertainment on a grand scale by tuning in on your
+            <br></br> Smart TVs, gaming consoles like Playstation and Xbox,
+            casting with<br></br> Chromecast, immersing yourself with Apple TV,
+            enjoying the cinematic<br></br> feel on Blu-ray players, and
+            exploring numerous other devices that<br></br> bring your content to
+            life.
+          </span>
         </p>
       </div>
       {/* //slider section */}

@@ -1,0 +1,54 @@
+.overall {
+  width: 1000px;
+  margin: 40px auto;
+}
+
+.overall li {
+  list-style: none;
+  width: 100%;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  background: #98d6b6;
+  box-shadow: 6px 6px 10px -1px rgba(159, 226, 191) -6px, -6px, 10px,
+    -1px rgb(212, 241, 226);
+  color: black;
+}
+
+.overall li label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.overall li label::after {
+  content: "+";
+  font-size: 18px;
+  font-size: 35px;
+}
+
+.overall li input[type="radio"] {
+  display: none;
+}
+
+.overall .content {
+  color: #555;
+  padding: 0 10px;
+  line-height: 26px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s, padding 0.5s;
+}
+
+.overall input[type="radio"]:checked + label + .content {
+  max-height: 108px;
+  padding: 10px 10px 20px;
+}
+
+.overall input[type="radio"]:checked + label::after {
+  content: "-";
+}

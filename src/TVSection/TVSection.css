@@ -1,0 +1,77 @@
+.rotator {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+
+  height: 150px;
+  transform-style: preserve-3d;
+  animation: roter 15s linear infinite;
+  /* width: 55%; */
+}
+
+.items {
+  position: absolute;
+  height: 100%;
+  /* width: 100%; */
+  overflow: hidden;
+  border: 2px solid white;
+}
+
+.items img {
+  height: 100%;
+  /* width: 100%; */
+  transition: all 3s ease;
+}
+.items:hover img {
+  transform: scale(1);
+}
+
+@keyframes roter {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(340deg);
+  }
+}
+
+.items:first-child {
+  transform: rotateY(calc(20deg)) translateZ(250px);
+}
+
+.items:nth-child(2) {
+  transform: rotateY(calc(60deg)) translateZ(250px);
+}
+
+.items:nth-child(3) {
+  transform: rotateY(calc(100deg)) translateZ(250px);
+}
+
+.items:nth-child(4) {
+  transform: rotateY(calc(140deg)) translateZ(250px);
+}
+
+.items:nth-child(5) {
+  transform: rotateY(calc(180deg)) translateZ(250px);
+}
+
+.items:nth-child(6) {
+  transform: rotateY(calc(220deg)) translateZ(250px);
+}
+
+.items:nth-child(7) {
+  transform: rotateY(calc(260deg)) translateZ(250px);
+}
+
+.items:nth-child(8) {
+  transform: rotateY(calc(300deg)) translateZ(250px);
+}
+
+.items:nth-child(9) {
+  transform: rotateY(calc(340deg)) translateZ(250px);
+}
+
+/* .rotator:hover {
+  animation-play-state: paused;
+} */
