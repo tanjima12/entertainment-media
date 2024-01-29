@@ -9,7 +9,7 @@ const Brand = ({ brand }) => {
     navigate(`/brandDetails/${BrandName}`);
   };
   return (
-    <div className="flex flex-col items-center justify-center w-full max-w-sm mx-auto mb-8">
+    <div className=" flex flex-col items-center justify-center w-full max-w-sm mx-auto mb-8">
       <div
         className="card"
         style={{ backgroundImage: `url(${image})`, backgroundSize: "cover" }}

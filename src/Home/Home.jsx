@@ -72,7 +72,7 @@ const Home = () => {
         <div>
           <Kids></Kids>
         </div>
-        <div className="flex justify-end ml-20  lg:mr-32 mt-8 lg:mt-5">
+        <div className="   mb-48 mt-20 lg:mt-5">
           <Watch></Watch>
         </div>
       </div>
