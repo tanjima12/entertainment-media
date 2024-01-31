@@ -29,30 +29,21 @@ const Navbar = () => {
   };
   const navlist = (
     <>
-      <NavLink
-        to="/"
-        className="mr-5 bg-gradient-to-r from-[#4a9b9b] to-[#cdebf4] text-transparent bg-clip-text "
-      >
+      <NavLink to="/" className="mr-16 text-[#eefbfb] ">
         Home
       </NavLink>
-      <NavLink
-        to="/addProduct"
-        className="mr-5 bg-gradient-to-r from-[#4a9b9b] to-[#cdebf4] text-transparent bg-clip-text"
-      >
+      <NavLink to="/addProduct" className="mr-16 text-[#eefbfb]">
         Add Product
       </NavLink>
-      <NavLink
-        to="/myCart"
-        className="mr-5 bg-gradient-to-r from-[#4a9b9b] to-[#cdebf4] text-transparent bg-clip-text"
-      >
+      <NavLink to="/myCart" className="mr-16 text-[#eefbfb]">
         My Cart
       </NavLink>
     </>
   );
   return (
-    <div className="lg:ml-8 lg:mr-8">
-      <div className="ml-10 lg:navbar ">
-        <div className="navbar">
+    <div className=" bg-[#83C0C1]">
+      <div className=" lg:navbar ">
+        <div className="navbar-start">
           <div className="dropdown text-white">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
               <svg
@@ -99,26 +90,24 @@ const Navbar = () => {
               </label>
             </ul>
           </div>
-          <div className="flex gap-3 items-center">
+          <div className="flex gap-3 items-center ml-16">
             <img
-              className="h-20 w-16 rounded-full pt-5"
+              className="h-16 w-12 rounded-full pt-5 "
               src="https://i.ibb.co/rZZT72D/4785284-2516144.jpg"
             ></img>
             <a className=" text-white text-xl flex items-center mt-4 ">
-              <span className="text-xl bg-gradient-to-r from-[#CFE7fA] to-[#6393C1] text-transparent bg-clip-text font-bold">
+              <span className="text-xl bg-gradient-to-r from-[#354857] to-[#6393C1] text-transparent bg-clip-text font-bold">
                 M
               </span>
               <span className="text-5xl bg-gradient-to-r from-[#de09c2] to-[#00FFE1] text-transparent bg-clip-text mr-2  font-serif font-bold">
                 O
               </span>
-              <span className="bg-gradient-to-r from-[#CFE7fA] to-[#6393C1] text-transparent bg-clip-text">
-                ment
-              </span>
+              <span className="text-[#F4F2DE]">ment</span>
             </a>
           </div>
         </div>
-        <div className="navbar-center mr-48 hidden lg:flex ">
-          <ul className="menu menu-horizontal px-1  text-2xl font-poppins font-bold">
+        <div className="navbar-center  hidden lg:flex ">
+          <ul className="menu menu-horizontal   text-2xl font-poppins ">
             {navlist}
             <label className="swap swap-rotat">
               {/* this hidden checkbox controls the state */}
@@ -135,7 +124,7 @@ const Navbar = () => {
 
               {/* moon icon */}
               <svg
-                className="swap-off fill-current text-blue-300  w-10 h-8"
+                className="swap-off fill-current text-[#4a9b9b] w-10 h-8"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
               >
@@ -146,17 +135,18 @@ const Navbar = () => {
         </div>
 
         <div className="navbar-end">
-          <div className="  mt-2 lg:ml-24 lg:ml-1 flex gap-3 items-center">
+          <div className="  mt-2  lg:ml-1 flex gap-3 items-center ">
             {user ? (
               <>
+                <p className="text-white">{user.displayName}</p>
                 <img
                   className="h-12 w-12 rounded-full"
                   src={user.photoURL}
                 ></img>
-                <p className="text-white">{user.displayName}</p>
+
                 <button
                   onClick={handleSignout}
-                  className="btn btn-outline bg-gradient- px-10 border-none mr-3"
+                  className=" btn btn-outline bg-gradient-to-r from-[#00d2ff] to-[#928dab] px-5 border-none mr-16"
                 >
                   Log Out
                 </button>
@@ -165,7 +155,7 @@ const Navbar = () => {
               <>
                 <FaUserAlt className="text-3xl text-blue-300"></FaUserAlt>
                 <Link to="/login">
-                  <button className="btn btn-outline bg-gradient-to-r from-[#00d2ff] to-[#928dab] px-5 border-none mr-20">
+                  <button className="btn btn-outline bg-gradient-to-r from-[#00d2ff] to-[#928dab] px-5 border-none mr-16">
                     LogIn
                   </button>
                 </Link>

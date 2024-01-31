@@ -54,7 +54,7 @@ const Banner = () => {
           membership.
         </p>
         <div className="form-control lg:ml-[420px]">
-          <div className="input-group mt-3">
+          <div className="input-group mt-3 ml-10">
             <input
               type="email"
               placeholder="Enter Your email"

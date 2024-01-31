@@ -64,7 +64,7 @@ const Branddetails = () => {
   return (
     <div className=" mr-10 ml-10">
       <Navbar></Navbar>
-      <h1 className="text-5xl font-orbitron text-white text-center pt-5">
+      <h1 className="text-5xl font-poppins text-[#CCCCCC] text-center pt-5">
         Our Most Famous Available Services
       </h1>
       {!details.length > 0 ? (
