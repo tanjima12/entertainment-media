@@ -16,6 +16,7 @@ import UpdateProduct from "./UpdateProduct/UpdateProduct";
 import ViewDetails from "./ViewDetails/ViewDetails";
 import MyCart from "./MyCart/MyCart";
 import MemberShip from "./MemberShip";
+import Movies from "./Footer/Movies";
 
 const router = createBrowserRouter([
   {
@@ -82,6 +83,10 @@ const router = createBrowserRouter([
       {
         path: "/member",
         element: <MemberShip></MemberShip>,
+      },
+      {
+        path: "/movies",
+        element: <Movies></Movies>,
       },
     ],
   },

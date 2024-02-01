@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <div className=" mt-20 bg-[#408E91]">
@@ -6,7 +8,9 @@ const Footer = () => {
           <header className="footer-title text-white text-3xl">
             Our services
           </header>
-          <a className="link link-hover text-white text-xl ">Movies</a>
+          <Link to="/movies" className=" text-white text-xl ">
+            Movies
+          </Link>
           <a className="link link-hover text-white text-xl">Drama</a>
           <a className="link link-hover text-white text-xl">Webseries</a>
           <a className="link link-hover text-white text-xl">Cartoon</a>
