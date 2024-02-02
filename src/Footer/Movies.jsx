@@ -19,8 +19,8 @@ const Movies = () => {
         <Navbar></Navbar>
       </div>
       <div className="bg-gray-900">
-        <h1 className="text-white text-center text-2xl pt-10 font-poppins">
-          Our Movie Collection
+        <h1 className="text-white text-center text-3xl pt-10 font-poppins">
+          Our Compilation of Films
         </h1>
       </div>
       <div>
@@ -41,24 +41,21 @@ const Movies = () => {
 
                 <div className="flex-col text-gray-300">
                   <p className="pt-4 text-2xl text-center font-bold">
-                    Joker (2020)
+                    {movie.movieName} (2020)
                   </p>
                   <hr className="hr-text" data-content="" />
                   <div className="text-md flex justify-between px-4 my-2">
                     <span className="font-bold">
-                      2h 2min | Crime, Drama, Thriller
+                      2h 2min | {movie.name} | {movie.type}
                     </span>
                     <span className="font-bold"></span>
                   </div>
                   <p className="hidden md:block px-4 my-4 text-sm text-left">
-                    In Gotham City, mentally troubled comedian Arthur Fleck is
-                    disregarded and mistreated by society. He then embarks on a
-                    downward spiral of revolution and bloody crime. This path
-                    brings him face-to-face with his alter-ego: the Joker.{" "}
+                    {movie.shortDescription}
                   </p>
 
                   <p className="flex text-md px-4 my-2">
-                    Rating: 9.0/10
+                    Rating: {movie.rating}/10
                     <span className="font-bold px-2">|</span>
                     Mood: Dark
                   </p>
